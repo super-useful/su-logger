@@ -1,0 +1,6 @@
+log:
+  customlevels:
+    ERROR: 1
+    INFO: 0
+    LOG: 0
+    WARN: 0

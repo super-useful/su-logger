@@ -1,12 +1,18 @@
 var EventEmitter = require('events');
 var Module = require('module');
+var CONF = require('config');
+
 
 var logCallback = function() {
   console.log.apply(console, arguments);
 };
 
 function logConsole(method, module) {
-  var args = [(new Date()).toJSON(), method];
+  if (!(method in CONF.log.customlevels)) {
+    return;
+  }
+
+  var args = [(new Date()).toJSON(), method.toUpperCase()];
   var index = 1;
 
   if (module instanceof Module) {
@@ -28,7 +34,7 @@ module.exports = function init(callback) {
     var event = 'app:' + consoleMethod;
 
     if (EventEmitter.listenerCount(process, event) < 1) {
-      process.on(event, logConsole.bind(null, consoleMethod.toUpperCase()));
+      process.on(event, logConsole.bind(null, consoleMethod));
     }
   });
 };

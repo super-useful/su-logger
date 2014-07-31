@@ -1,24 +1,26 @@
 {
-  "name": "su-logger",
-  "version": "0.0.0",
-  "description": "basic logging module using events emitted from node\'s `process`",
-  "dependencies": { },
-  "devDependencies": { },
-  "main": "index.js",
-  "author": {
-    "Simon Jefford": "si@ibrokethat.com",
-    "Christos Constandinou": "constantology@gmail.com"
+  "name" : "su-logger",
+  "version" : "0.0.0",
+  "description" : "basic logging module using events emitted from node's `process`",
+  "dependencies" : {
+    "config" : "x",
+    "yaml" : "x"
   },
-  "license":[ {
-    "type": "MIT",
-    "url": "https://raw.github.com/super-useful/su-logger/master/LICENSE"
-  }],
-	"repository": {
-		"type": "git",
-		"url": "git@github.com:super-useful/su-logger.git"
-	},
-  "scripts": { },
-  "engines": {
-    "node": "0.10.x"
+  "main" : "index.js",
+  "author" : {
+    "Simon Jefford" : "si@ibrokethat.com",
+    "Christos Constandinou" : "constantology@gmail.com"
+  },
+  "license" : [ {
+    "type" : "MIT",
+    "url" : "https://raw.github.com/super-useful/su-logger/master/LICENSE"
+  } ],
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:super-useful/su-logger.git"
+  },
+  "scripts" : { },
+  "engines" : {
+    "node" : "0.10.x"
   }
 }
