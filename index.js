@@ -8,11 +8,15 @@ var logCallback = function() {
 };
 
 function logConsole(method, module) {
-  if (!(method in CONF.log.customlevels)) {
+  method = method.toUpperCase();
+
+  var logLevel = CONF.log.customlevels;
+
+  if (logLevel && (method in logLevel) && !logLevel[method]) {
     return;
   }
 
-  var args = [(new Date()).toJSON(), method.toUpperCase()];
+  var args = [(new Date()).toJSON(), method];
   var index = 1;
 
   if (module instanceof Module) {
