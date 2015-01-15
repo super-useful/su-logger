@@ -39,7 +39,7 @@ function timeEnd(module) {
   var cached = cache.get(module);
   var time = (Date.now() - cached.start) + 'ms';
 
-  logConsole('app:time', module, time);
+  logConsole('time', module, time);
 
   cache.delete(module);
 }
