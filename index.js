@@ -39,9 +39,9 @@ function timeEnd(module) {
   var cached = cache.get(module);
   var time = (Date.now() - cached.start) + 'ms';
 
-  logConsole('time', module, time);
-
   cache.delete(module);
+
+  logConsole('time', module, time);
 }
 
 function timeStart(module) {
