@@ -4,7 +4,7 @@
   "description" : "basic logging module using events emitted from node's `process`",
   "dependencies" : {
     "config" : "x",
-    "yaml" : "x"
+    "js-yaml" : "3.2.x"
   },
   "main" : "index.js",
   "author" : {
