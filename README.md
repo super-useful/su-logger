@@ -4,7 +4,7 @@ su-logger adds a few event listeners to a node `process` — which is an `EventE
 
 only one event listener is added per `process`, which means you can write individual modules which `require('su-logger')` and emit logging events without having to worry about multiple event listeners being added and callbacks firing more than once.
 
-allowing you to supply a custom callback, means you can then apply whatever logging code you want to at the top level of your application.
+allowing you to supply a custom callback means, you can then apply whatever logging code you want to at the top level of your application.
 
 ## usage
 
