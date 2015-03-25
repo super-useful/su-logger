@@ -27,7 +27,7 @@ allowing you to supply a custom callback means, you can then apply whatever logg
 
 
     process.emit('app:time', module);
-    // do something asynchronous stuff
+    // do something asynchronous
     process.emit('app:timeend', module);
 
 ```
